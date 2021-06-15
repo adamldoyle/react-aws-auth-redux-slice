@@ -1,22 +1,27 @@
-# react-library-template
+# react-aws-auth-redux-slice
 
-Template to use for building React libraries.
+Extension of [@adamldoyle/react-aws-auth-context](https://github.com/adamldoyle/react-aws-auth-context) that listens to Auth context changes and adds the session and profile to an authentication Redux slice.
 
 ## Features
 
-1. List features here
+1. Automatically detects profile/session changes and keeps them up-to-date in Redux
+2. Provides several selectors to extract information
 
 ## Installation
 
-1. `yarn add @adamldoyle/react-library-template`
+1. `yarn add @adamldoyle/react-aws-auth-redux-slice`
+2. Build auth slice using `buildAuthSlice` which returns `authSlice`, `authSelectors`, `AuthInjector`
+3. Nest `AuthInjector` within `AuthContextProvider` (from [@adamldoyle/react-aws-auth-context](https://github.com/adamldoyle/react-aws-auth-context)) and containing the rest of your application component heirarchy
+4. Use selectors provided by `authSelectors` to select session/profile information as necessary
 
 ## Examples
 
-- (INSERT STORYBOOK URL HERE)
+- https://adamldoyle-react-aws-auth-redux-slice-storybook.netlify.app/
 
 OR
 
-- `yarn storybook`
+1. Create `.env` file in root based on `.env.sample`
+2. `yarn storybook`
 
 ## Development
 
