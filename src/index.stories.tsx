@@ -3,10 +3,8 @@ import { Story, Meta } from '@storybook/react';
 import { Provider, useSelector } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import { Box, Button, Typography } from '@material-ui/core';
-import {
-  AuthContextProvider,
-  AuthContext,
-} from '@adamldoyle/react-aws-auth-context';
+import { AuthContext } from '@adamldoyle/react-aws-auth-context-core';
+import { AuthContextProvider } from '@adamldoyle/react-aws-auth-context-mui-formik';
 import { buildAuthSlice } from '.';
 
 const { authSlice, authSelectors, AuthInjector } = buildAuthSlice();

@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { configureStore, PayloadAction } from '@reduxjs/toolkit';
-import { AuthContext } from '@adamldoyle/react-aws-auth-context';
+import { AuthContext } from '@adamldoyle/react-aws-auth-context-core';
 import { buildAuthSlice, IAuthState, ISession } from './';
 
 const completedAuthContext = {

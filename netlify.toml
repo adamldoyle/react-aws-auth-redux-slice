@@ -1,0 +1,18 @@
+[build]
+  base    = ""
+  publish = "storybook-static"
+  command = "REACT_APP_STAGE=dev yarn storybook:build"
+
+[context.production]
+  command = "REACT_APP_STAGE=prod yarn storybook:build"
+
+[context.deploy-preview]
+  command = "REACT_APP_STAGE=dev yarn storybook:build"
+
+[context.branch-deploy]
+  command = "REACT_APP_STAGE=dev yarn storybook:build"
+
+[[redirects]]
+  from    = "/*"
+  to      = "/index.html"
+  status  = 200

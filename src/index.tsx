@@ -9,7 +9,7 @@ import {
   Selector,
   Slice,
 } from '@reduxjs/toolkit';
-import { AuthContext, IProfile } from '@adamldoyle/react-aws-auth-context';
+import { AuthContext, IProfile } from '@adamldoyle/react-aws-auth-context-core';
 
 /**
  * Session data containing Cognito session information as well as profile.
